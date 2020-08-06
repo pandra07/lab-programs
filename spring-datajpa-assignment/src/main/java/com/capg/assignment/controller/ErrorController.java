@@ -23,6 +23,7 @@ public class ErrorController {
 	public ErrorResponse handleStudentAlreadyExistsException(Exception ex, HttpServletRequest req)
 	{
 		return new ErrorResponse(new Date(), ex.getMessage(), 
+	
 				HttpStatus.BAD_REQUEST.getReasonPhrase(), HttpStatus.BAD_GATEWAY.value(), req.getRequestURI());
 	}
 	
